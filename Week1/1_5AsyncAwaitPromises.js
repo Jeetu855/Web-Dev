@@ -114,17 +114,18 @@ async function main() {
   jeetuAsyncFunc().then(function (value) {
     console.log(value);
   });
-  //let value = jeetuAsyncFunc();
-  //let value = await jeetuAsyncFunc();
+  let value1 = jeetuAsyncFunc();
+  let value2 = await jeetuAsyncFunc();
   console.log("hi there 2"); // also gets logged after setTimeout
-  //console.log(value); // logs <Promise { 'hi there' }'> if we dont use await and setTimeout
-} // logs "hi there" if we use await and setTimeout
+  console.log(value1); // logs <Promise { 'hi there' }'> if we dont use await and setTimeout
+  console.log(value2); // logs "hi there" if we use await and setTimeout
+}
 // logs <Promise { <pending> }> if we use setTimeout and dont use await
 
 main();
 console.log("after main");
 /* When using .then() , "hi there2" dosent wait for setTimeout and "hi there" comes after setTimeout
-all login after await gets stuck, not the same case when using .then()
+all logging after await gets stuck, not the same case when using .then()
 async written on caller side and not on the side we write async function
 every await need to be wrapped inside an async function
 */
