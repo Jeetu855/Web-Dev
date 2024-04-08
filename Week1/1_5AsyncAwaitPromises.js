@@ -1,9 +1,9 @@
 const fs = require("fs");
 /* Synchoronous : Together, one after other in sequential manner, only 1 thing
-happening at a time
+happening at a time//maggi making example
 Asynchronous : Happens in parts, multiple things are context switching with each other
 
-fs.readFile : asunc function
+fs.readFile : async function
 Fetch : Fetch some data from an API endpoint
 */
 
@@ -94,7 +94,7 @@ In promises, there are no callbacks, Promises introduced to get rid of callbacks
 // let a = jeetuReadFile();
 // console.log(a); // Promise { <pending> }
 // a.then(onDone);
-//Synchronously return the promise but asynchronously return the data
+//*Synchronously return the promise but asynchronously return the data
 /*State of promises : Pending, Resolved, Rejected
 Pass function as first argument to promise and that functions first arguement is resolve
 .then() gets called whenever the async function gets resolved
@@ -128,4 +128,5 @@ console.log("after main");
 all logging after await gets stuck, not the same case when using .then()
 async written on caller side and not on the side we write async function
 every await need to be wrapped inside an async function
+Promises can be used outside of functions as well just to pass data
 */
